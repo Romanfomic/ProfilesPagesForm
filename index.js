@@ -64,4 +64,27 @@ document.addEventListener('DOMContentLoaded', () => {
     sortCriteriaSelect.addEventListener('change', renderUsers);
     sortOrderSelect.addEventListener('change', renderUsers);
 
+    userForm.addEventListener('submit', event => {
+        event.preventDefault();
+        const firstName = document.getElementById('firstName').value;
+        const lastName = document.getElementById('lastName').value;
+        const age = parseInt(document.getElementById('age').value, 10);
+        const email = document.getElementById('email').value;
+        const photoInput = document.getElementById('photo');
+
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            const user = {
+                firstName,
+                lastName,
+                age,
+                email,
+                photo: e.target.result
+            };
+            users.push(user);
+            renderUsers();
+            userForm.reset();
+        };
+        reader.readAsDataURL(photoInput.files[0]);
+    });
 });
