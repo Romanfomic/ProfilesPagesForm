@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: ghostwhite;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input, form button {
+    margin: 5px 0;
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+}
+
+form button {
+    background: #333;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+form button:hover {
+    background: #555;
+}
+
+.sort-options {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sort-options label, .sort-options select {
+    margin: 0 5px;
+}
