@@ -3,8 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <title>Profiles</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<div class="container">
+    <h1>User List</h1>
+    <div class="sort-options">
+        <label for="ageFilter">Older than 18</label>
+        <input type="checkbox" id="ageFilter" name="ageFilter">
+        <label for="sortCriteria">Sort by:</label>
+        <select id="sortCriteria">
+            <option value="name">Name</option>
+            <option value="age">Age</option>
+        </select>
+        <label for="sortOrder">Order:</label>
+        <select id="sortOrder">
+            <option value="asc">Ascending</option>
+            <option value="desc">Descending</option>
+        </select>
+    </div>
 
+    <div id="userList"></div>
+
+    <h2>Add New User</h2>
+    <form id="userForm">
+        <input type="text" id="firstName" placeholder="First Name" required>
+        <input type="text" id="lastName" placeholder="Last Name" required>
+        <input type="number" id="age" placeholder="Age" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="file" id="photo" accept="image/*" required>
+        <button type="submit">Add User</button>
+    </form>
+</div>
+<script src="index.js"></script>
 </body>
 </html>
