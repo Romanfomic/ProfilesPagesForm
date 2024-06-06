@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const userList = document.getElementById('userList');
     const ageFilterCheckbox = document.getElementById('ageFilter');
+    const userForm = document.getElementById('userForm');
     const sortCriteriaSelect = document.getElementById('sortCriteria');
     const sortOrderSelect = document.getElementById('sortOrder');
     //test data
@@ -58,5 +59,9 @@ document.addEventListener('DOMContentLoaded', () => {
             userList.appendChild(userCard);
         });
     }
+
+    ageFilterCheckbox.addEventListener('change', renderUsers);
+    sortCriteriaSelect.addEventListener('change', renderUsers);
+    sortOrderSelect.addEventListener('change', renderUsers);
 
 });
