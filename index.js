@@ -4,23 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const userForm = document.getElementById('userForm');
     const sortCriteriaSelect = document.getElementById('sortCriteria');
     const sortOrderSelect = document.getElementById('sortOrder');
-    //test data
-    const users = [
-        {
-            firstName: "AfirstName",
-            lastName: "AlastName",
-            age: 20,
-            email: "test@test.com",
-            photo: null
-        },
-        {
-            firstName: "BfirstName",
-            lastName: "BlastName",
-            age: 16,
-            email: "test@test.com",
-            photo: null
-        },
-    ];
+
     renderUsers();
 
     function renderUsers() {
